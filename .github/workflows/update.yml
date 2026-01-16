@@ -1,0 +1,29 @@
+name: Update Chokobo
+on:
+  workflow_dispatch: 
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Sync with Template
+        run: |
+          # 1. Setup identity
+          git config --global user.name "actions-user"
+          git config --global user.email "actions@github.com"
+
+          # 2. Add and fetch the template
+          git remote add template https://github.com/redphx/chokobo.git
+          git fetch template
+
+          # 3. Merge template changes
+          git merge template/main --allow-unrelated-histories -m "chore: sync with template"
+
+          # 4. Push changes back to your repo
+          git push origin main

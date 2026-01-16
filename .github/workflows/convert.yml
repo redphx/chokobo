@@ -1,0 +1,30 @@
+name: Convert books
+on:
+  workflow_dispatch:
+
+jobs:
+  check-and-convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install kepubify
+        run: |
+          wget https://github.com/pgaskin/kepubify/releases/download/v4.0.4/kepubify-linux-64bit
+          chmod +x kepubify-linux-64bit
+          sudo mv kepubify-linux-64bit /usr/local/bin/kepubify
+      
+      - name: Install Python dependencies
+        run: |
+          pip install dropbox==12.0.2
+      
+      - name: Check and convert files
+        env:
+          DROPBOX_ACCESS_TOKEN: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+          DROPBOX_FOLDER: ${{ secrets.DROPBOX_FOLDER }}
+        run: python convert.py
