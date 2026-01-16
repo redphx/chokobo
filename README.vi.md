@@ -11,7 +11,7 @@ Sử dụng GitHub Action để chuyển đổi các file sách `epub` trên Dro
 - Không cần kết nối Kobo với máy tính để chép sách
 - Sách được lưu trên Dropbox nên có thể tải về trên Kobo lúc nào cũng được
 - Có thể kích hoạt trên mọi thiết bị: máy tính, điện thoại...
-- Hỗ trợ convert nhiều sách cùng lúc (tiện hơn ([send.djazz.se](https://send.djazz.se/))
+- Hỗ trợ convert nhiều sách cùng lúc (tiện hơn [send.djazz.se](https://send.djazz.se/))
 - Riêng tư 100%, không như sendtokindle :v
 
 **Nhược điểm:**  
