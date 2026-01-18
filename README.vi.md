@@ -3,6 +3,8 @@ Tiện ích bán tự động chuyển đổi sách `epub` sang `kepub` trên Dr
 
 Gọi là "bán tự động" vì sau khi upload sách lên Dropbox bạn phải tự nhấn chạy tiện ích để bắt đầu quá trình chuyển đổi, chứ không thể làm tự động hoàn toàn.
 
+https://github.com/user-attachments/assets/702c95af-690a-4c23-a448-62c014cdb461
+
 ## ✨ Tính năng
 Sử dụng GitHub Action để chuyển đổi các file sách `epub` trên Dropbox thành chuẩn `kepub`, sau đó upload ngược lại lên Dropbox.  
 
