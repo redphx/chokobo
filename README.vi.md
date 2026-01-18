@@ -23,6 +23,13 @@ Sử dụng GitHub Action để chuyển đổi các file sách `epub` trên Dro
   - Convert nhiều sách cùng một lúc tiết kiệm thời gian hơn là chạy riêng từng lần cho mỗi sách
   - [Vào đây](../../actions/metrics/usage) để xem thống kê số phút đã sử dụng
 
+## Định dạng Kepub
+Kobo hỗ trợ Epub, tuy nhiên bạn nên dùng định dạng Kepub (Kobo EPUB) vì nhiều lý do:  
+
+- Kobo sử dụng trình đọc Adobe Ebook để hiển thị các file Epub. Trình đọc này đã cũ và chậm chạp, thiếu chức năng
+- Trình đọc Kepub sử dụng Webkit, hỗ trợ nhiều chức năng mới, ít lỗi, nên sách Kepub sẽ hiển thị đẹp hơn
+
+
 ## I. Chuẩn bị
 
 ### Tài khoản
