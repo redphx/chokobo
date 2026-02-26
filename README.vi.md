@@ -50,9 +50,12 @@ Với các Kobo khác bạn phải cài đặt NickelMenu để có thể sử d
 > Trong hướng dẫn sẽ có nhắc đến từ khóa `Token` hoặc `AccessToken`. Hãy xem nó như mật khẩu, tuyệt đối không để lộ hoặc chia sẻ với bất kỳ ai. Nó được dùng để truy cập dữ liệu trong tài khoản của bạn mà không cần phải biết mật khẩu tài khoản.
 
 1. Chắc chắn là Kobo đã liên kết tài khoản Dropbox thành công ([hướng dẫn](https://help.kobo.com/hc/en-us/articles/360033830114-Add-books-to-your-eReader-using-Dropbox))
+
 2. Kết nối Kobo với máy tính
+
 3. Mở file `.kobo/Kobo/Kobo eReader.conf` bằng Notepad (Windows) hoặc TextEdit (Mac)  
     > Nếu bạn dùng macOS và không thấy thư mục `.kobo`, nhấn tổ hợp phím `Cmd + Shift + .` để hiện thư mục ẩn trong Finder
+
 4. Tìm mục `[DropboxSettings]`, sau đó copy giá trị của `AccessToken` và để tạm ở đâu đó (sẽ cần ở bước 9).
     <br><br>
     > ```ini
@@ -61,16 +64,25 @@ Với các Kobo khác bạn phải cài đặt NickelMenu để có thể sử d
     > UserGuideId=...
     > Username=...
     > ```
+
 5. Đóng file và ngắt kết nối Kobo và máy tính  
+
 6. Đăng nhập GitHub và [nhấn vào link này](https://github.com/new?template_name=chokobo&template_owner=redphx) để sao chép tool về tài khoản cá nhân
-7. Thực hiện các bước như hướng dẫn trong hình. Lưu ý mục **Configuration** phải chọn **PRIVATE** để đảm bảo riêng tư, tránh người ngoài dòm ngó.
-    <br><div align="center"><img width="789" height="485" alt="image" src="https://github.com/user-attachments/assets/75382660-bef4-4b0a-a1e2-5ed64c23b0df" /></div>
-8. Trong trang của repo vừa tạo, vào `Settings > Security > Secrets and variables > Actions`, nhấn vào nút `New repository secret`
-    <br><br><div align="center"><img width="796" height="570" alt="image" src="https://github.com/user-attachments/assets/d66d9899-59f5-4bc0-b92d-07ca2628ff06" /></div>
-9. Nhập các giá trị sau và nhấn `Add secret` để lưu:
-    - **Name**: `DROPBOX_ACCESS_TOKEN`
-    - **Secret**: giá trị của `AccessToken` ở bước 4  
-    <br><div align="center"><img width="792" height="426" alt="image" src="https://github.com/user-attachments/assets/686e7798-e003-4a1c-a739-3515b57d7d1c" /></div>
+
+7. Nhập thông tin
+    - **(1) Repository name**: Nhập tên cho repository
+    - **(2) Configuration**: phải chọn **PRIVATE** (để đảm bảo riêng tư, tránh người ngoài dòm ngó), sau đó nhấn **Create repository**.
+    <br><br><div align="center"><img width="787" height="484" alt="image" src="https://github.com/user-attachments/assets/ce1e2725-f64b-4afe-ba18-dc9534c4c8e6" />
+</div>
+
+8. Trong trang của repo vừa tạo, vào `Settings > Security > Secrets and variables > Actions`, nhấn vào nút `New repository secret` ([link trực tiếp](../../settings/secrets/actions/new))
+    <br><div align="center"><img width="796" height="570" alt="image" src="https://github.com/user-attachments/assets/d66d9899-59f5-4bc0-b92d-07ca2628ff06" /></div>
+
+9. Nhập các giá trị sau và nhấn `Add secret` để lưu:  
+    - **(1) Name**: `DROPBOX_ACCESS_TOKEN`  
+    - **(2) Secret**: giá trị của `AccessToken` ở bước 4  
+    <br><div align="center"><img width="792" height="426" alt="image" src="https://github.com/user-attachments/assets/f328fde7-0c80-4b25-aa24-443588177909" />
+</div>
 
 Vậy là bạn đã thực hiện xong phần cài đặt và cấu hình.
 
@@ -91,6 +103,3 @@ Vậy là bạn đã thực hiện xong phần cài đặt và cấu hình.
 **Mẹo:** bạn có thể lưu (bookmark) [địa chỉ trang web](../../actions/workflows/convert.yml) ở bước 2 để tiện cho việc chạy tool sau này.
 
 Để cập nhật Chokobo, chạy workflow có tên [`Update Chokobo`](../../actions/workflows/update.yml).
-
-## IV. Kích hoạt tool bằng tính năng Shortcuts trên iOS  
-*(...viết sau...)*
