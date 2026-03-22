@@ -43,7 +43,7 @@ This utility requires GitHub and Dropbox accounts. Use the following links to cr
 ### Devices
 If using Kobo Forma, Sage, Elipsa, Elipsa 2E, or Libra Colour, skip this step as Dropbox support is native.
 
-For other Kobo models, you must install NickelMenu to enable Dropbox
+For other Kobo models, follow [this guide](https://github.com/redphx/chokobo/wiki/How-to-enable-Dropbox-on-Kobo-eReaders-using-NickelMenu) to install NickelMenu and enable the Dropbox feature.
 
 ## II. Installation and Configuration
 
