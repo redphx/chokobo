@@ -69,7 +69,7 @@ for entry in result.entries:
     print(f'Upload path: {output_path}')
 
     with open(output_name, 'rb') as f:
-        dbx.files_upload(f.read(), output_path, mode=dropbox.files.WriteMode.overwrite)
+        dbx.files_upload(f.read(), output_path, mode=dropbox.files.WriteMode.overwrite, autorename=True)
 
     # Create "original" subfolder if needed
     if not folder_exists(original_folder):
@@ -77,7 +77,7 @@ for entry in result.entries:
 
     # Move original to "original" subfolder
     new_path = f'{original_folder}/{file_name}'
-    dbx.files_move_v2(file_path, new_path)
+    dbx.files_move_v2(file_path, new_path, autorename=True)
 
     print(f'Converted to: {output_path}')
     print(f'Moved original to: {new_path}')
