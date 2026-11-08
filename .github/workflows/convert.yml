@@ -16,7 +16,7 @@ jobs:
 
       - name: Install kepubify
         run: |
-          wget https://github.com/pgaskin/kepubify/releases/download/v4.0.4/kepubify-linux-64bit
+          wget https://github.com/pgaskin/kepubify/releases/latest/download/kepubify-linux-64bit
           chmod +x kepubify-linux-64bit
           sudo mv kepubify-linux-64bit /usr/local/bin/kepubify
 
